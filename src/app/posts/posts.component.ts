@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 
 import { PostsService } from '../posts.service';
 import { Post } from '../Post';
@@ -17,7 +18,14 @@ export class PostsComponent implements OnInit {
   constructor(private postsService: PostsService) { }
 
   ngOnInit() {
-    this.posts = this.postsService.getPosts();
+    this.getPosts();
+  }
+
+  getPosts(): void {
+    this.postsService.getPosts()
+      .subscribe(posts => {
+        this.posts = posts;
+      });
   }
 
 }

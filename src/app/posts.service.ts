@@ -1,5 +1,7 @@
 import { Post } from './post';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { of } from 'rxjs/observable/of';
 
 const dummyPosts: Post[] = [
   {
@@ -19,8 +21,8 @@ export class PostsService {
 
   constructor() { }
 
-  getPosts(): Post[] {
-    return dummyPosts;
+  getPosts(): Observable<Post[]> {
+    return of(dummyPosts);
   }
 
 }
