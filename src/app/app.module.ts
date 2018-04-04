@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
@@ -22,6 +23,7 @@ import { PostsService } from './posts.service';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     AppRoutingModule,
     MatToolbarModule,
     MatCardModule,
