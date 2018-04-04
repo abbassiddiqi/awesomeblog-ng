@@ -1,0 +1,13 @@
+.posts {
+  max-width: 720px;
+  margin: 20px auto;
+  padding: 0 10px;
+}
+
+.post {
+  margin: 15px 0;
+}
+
+.mat-card-header-text {
+  margin: 0 !important;
+}

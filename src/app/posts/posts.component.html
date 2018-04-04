@@ -1,3 +1,13 @@
-<p>
-  posts works!
-</p>
+<div class="posts">
+  <mat-card *ngFor="let post of posts" class="post">
+    <mat-card-content>
+      <strong class="title">{{ post.title }}</strong>
+      <p>{{ post.content }}</p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-paginator
+    [length]="length"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="pageSizeOptions"></mat-paginator>
+</div>
