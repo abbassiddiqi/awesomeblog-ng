@@ -7,6 +7,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -32,7 +34,9 @@ import { PostsComponent } from './components/posts/posts.component';
     FlexLayoutModule,
     MatToolbarModule,
     MatCardModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [
     PostsService
