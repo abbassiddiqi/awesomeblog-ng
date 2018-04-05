@@ -17,6 +17,7 @@ import { PostsService } from './services/posts.service';
 import { AppComponent } from './components/app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PostsComponent } from './components/posts/posts.component';
+import { AddPostComponent } from './components/add-post/add-post.component';
 
 
 
@@ -24,7 +25,8 @@ import { PostsComponent } from './components/posts/posts.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    PostsComponent
+    PostsComponent,
+    AddPostComponent
   ],
   imports: [
     BrowserModule,
