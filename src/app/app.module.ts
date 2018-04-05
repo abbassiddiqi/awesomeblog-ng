@@ -8,11 +8,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
-import { PostsComponent } from './posts/posts.component';
-import { PostsService } from './posts.service';
+
+import { PostsService } from './services/posts.service';
+
+import { AppComponent } from './components/app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { PostsComponent } from './components/posts/posts.component';
+
 
 
 @NgModule({

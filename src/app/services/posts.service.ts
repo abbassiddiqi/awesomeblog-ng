@@ -1,22 +1,10 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Post } from './post';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { catchError, map, tap } from 'rxjs/operators';
 
-const dummyPosts: Post[] = [
-  {
-    id: '1',
-    title: 'Is this a title?',
-    content: 'Is this the content of the post'
-  },
-  {
-    id: '2',
-    title: 'Is this a second title?',
-    content: 'Is this the content of the second post'
-  }
-];
+import { Post } from '../models/post';
 
 @Injectable()
 export class PostsService {
