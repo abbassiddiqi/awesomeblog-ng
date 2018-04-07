@@ -12,7 +12,8 @@
   </mat-card>
 
   <mat-paginator
-    [length]="length"
+    [length]="postsCount"
     [pageSize]="pageSize"
-    [pageSizeOptions]="pageSizeOptions"></mat-paginator>
+    [pageSizeOptions]="pageSizeOptions"
+    (page)="onPageChange($event)"></mat-paginator>
 </div>

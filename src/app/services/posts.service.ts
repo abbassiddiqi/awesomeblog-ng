@@ -16,11 +16,21 @@ export class PostsService {
   };
   constructor(private http: HttpClient) { }
 
-  getPosts(): Observable<Post[]> {
-    return this.http.get<Post[]>(this.postsUrl, this.httpOptions)
+  getPosts(skip: number = 0, limit: number = 5): Observable<Post[]> {
+    const url = `${this.postsUrl}/?filter[skip]=${skip}&&filter[limit]=${limit}`;
+    return this.http.get<Post[]>(url, this.httpOptions)
       .pipe(
         tap(() => { console.log('fetched posts'); }),
         catchError(this.handleError('getPosts', []))
+      );
+  }
+
+  getPostsCount(): Observable<object> {
+    const url = `${this.postsUrl}/count`;
+    return this.http.get(url, this.httpOptions)
+      .pipe(
+        tap(() => { console.log('fetched posts count'); }),
+        catchError(this.handleError<object>('getPostsCount'))
       );
   }
 
