@@ -1,3 +1,11 @@
-<p>
-  show-post works!
-</p>
+<div class="container show-post" *ngIf="post">
+  <mat-card>
+    <p class="mat-title">{{ post.title }}</p>
+    <p class="mat-body-1">{{ post.content }}</p>
+    <div class="action-buttons">
+      <button mat-raised-button (click)="goBack()" color="primary">Edit</button>
+      <button mat-raised-button (click)="goBack()" color="warn">Delete</button>
+      <button mat-raised-button (click)="goBack()">Go Back</button>
+    </div>
+  </mat-card>
+</div>

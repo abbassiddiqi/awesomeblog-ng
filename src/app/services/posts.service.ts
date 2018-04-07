@@ -34,6 +34,15 @@ export class PostsService {
       );
   }
 
+  getPost(id: string): Observable<Post> {
+    const url = `${this.postsUrl}/${id}`;
+    return this.http.get<Post>(url, this.httpOptions)
+      .pipe(
+        tap(() => { console.log('fetched post for id ', id); }),
+        catchError(this.handleError<Post>('getPost'))
+      );
+  }
+
   addPost(postData): Observable<Post> {
     return this.http.post<Post>(this.postsUrl, postData, this.httpOptions)
       .pipe(

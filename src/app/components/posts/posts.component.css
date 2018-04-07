@@ -14,3 +14,8 @@
 .mat-title {
   margin: 0;
 }
+
+.black-link {
+  text-decoration: none;
+  color: rgba(0,0,0,.87);
+}

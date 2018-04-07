@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { PostsComponent } from './components/posts/posts.component';
 import { AddPostComponent } from './components/add-post/add-post.component';
+import { ShowPostComponent } from './components/show-post/show-post.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,10 @@ const routes: Routes = [
   {
     path: 'posts/new',
     component: AddPostComponent
+  },
+  {
+    path: 'posts/:id',
+    component: ShowPostComponent
   },
   {
     path: '',

@@ -27,8 +27,7 @@ export class PostsComponent implements OnInit {
   getPostsCount(): void {
     this.postsService.getPostsCount()
       .subscribe((result) => {
-        console.log(result);
-        this.postsCount = result.count;
+        this.postsCount = result.count || 0;
       });
   }
 
