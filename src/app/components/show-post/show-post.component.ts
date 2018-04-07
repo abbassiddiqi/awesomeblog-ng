@@ -32,6 +32,13 @@ export class ShowPostComponent implements OnInit {
       });
   }
 
+  deletePost(postId): void {
+    this.postService.deletePost(postId)
+      .subscribe(() => {
+        this.goBack();
+      });
+  }
+
   goBack(): void {
     this.location.back();
   }
