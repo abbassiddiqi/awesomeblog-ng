@@ -19,7 +19,16 @@ export class PostsService {
   getPosts(): Observable<Post[]> {
     return this.http.get<Post[]>(this.postsUrl, this.httpOptions)
       .pipe(
+        tap(() => { console.log('fetched posts'); }),
         catchError(this.handleError('getPosts', []))
+      );
+  }
+
+  addPost(postData): Observable<Post> {
+    return this.http.post<Post>(this.postsUrl, postData, this.httpOptions)
+      .pipe(
+        tap(() => { console.log('added new post'); }),
+        catchError(this.handleError<Post>('addPost'))
       );
   }
 

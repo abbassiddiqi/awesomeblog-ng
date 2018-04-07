@@ -9,6 +9,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -38,10 +40,13 @@ import { AddPostComponent } from './components/add-post/add-post.component';
     MatCardModule,
     MatPaginatorModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [
-    PostsService
+    PostsService,
+    Location
   ],
   bootstrap: [AppComponent]
 })

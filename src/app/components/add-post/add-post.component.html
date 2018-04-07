@@ -1,5 +1,17 @@
 <div class="container add-post">
   <h2 class="mat-h2">Add new Post</h2>
-  <mat-card>
+  <mat-card fxLayout="column">
+    <mat-form-field>
+      <input #postTitle matInput placeholder="Post Title" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea #postContent matInput matTextareaAutosize matAutosizeMinRows="8" matAutosizeMaxRows="12" placeholder="Post Content"></textarea>
+    </mat-form-field>
+
+    <div>
+      <button mat-raised-button (click)="addPost(postTitle.value, postContent.value)" color="primary">Add new Post</button>
+      <button mat-raised-button (click)="goBack()">Cancel</button>
+    </div>
   </mat-card>
 </div>
