@@ -20,6 +20,7 @@ import { AppComponent } from './components/app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { AddPostComponent } from './components/add-post/add-post.component';
+import { ShowPostComponent } from './components/show-post/show-post.component';
 
 
 
@@ -28,7 +29,8 @@ import { AddPostComponent } from './components/add-post/add-post.component';
     AppComponent,
     HeaderComponent,
     PostsComponent,
-    AddPostComponent
+    AddPostComponent,
+    ShowPostComponent
   ],
   imports: [
     BrowserModule,
