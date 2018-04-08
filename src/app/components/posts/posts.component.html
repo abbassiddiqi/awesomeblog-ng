@@ -12,6 +12,7 @@
   </mat-card>
 
   <mat-paginator
+    *ngIf="posts"
     [length]="postsCount"
     [pageSize]="pageSize"
     [pageSizeOptions]="pageSizeOptions"

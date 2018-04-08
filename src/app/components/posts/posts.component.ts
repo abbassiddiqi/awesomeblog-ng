@@ -12,6 +12,8 @@ import { Post } from '../../models/post';
 })
 export class PostsComponent implements OnInit {
   posts: Post[];
+
+  // Pagination Variables
   postsCount = 0;
   pageIndex = 0;
   pageSize = 5;
@@ -26,7 +28,7 @@ export class PostsComponent implements OnInit {
 
   getPostsCount(): void {
     this.postsService.getPostsCount()
-      .subscribe((result) => {
+      .subscribe((result: { count }) => {
         this.postsCount = result.count || 0;
       });
   }
