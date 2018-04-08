@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule } from '@angular/forms';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
@@ -38,6 +39,7 @@ import { ShowPostComponent } from './components/show-post/show-post.component';
     HttpClientModule,
     AppRoutingModule,
     FlexLayoutModule,
+    FormsModule,
     MatToolbarModule,
     MatCardModule,
     MatPaginatorModule,

@@ -44,7 +44,7 @@ export class PostsService {
   }
 
   addPost(postData): Observable<Post> {
-    return this.http.post<Post>(this.postsUrl, postData, this.httpOptions)
+    return this.http.put<Post>(this.postsUrl, postData, this.httpOptions)
       .pipe(
         tap(() => { console.log('added new post'); }),
         catchError(this.handleError<Post>('addPost'))

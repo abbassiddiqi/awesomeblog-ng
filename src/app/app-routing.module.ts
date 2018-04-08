@@ -20,6 +20,10 @@ const routes: Routes = [
     component: ShowPostComponent
   },
   {
+    path: 'posts/:id/edit',
+    component: AddPostComponent
+  },
+  {
     path: '',
     component: PostsComponent
   }

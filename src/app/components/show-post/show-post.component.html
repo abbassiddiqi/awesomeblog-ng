@@ -3,7 +3,7 @@
     <p class="mat-title">{{ post.title }}</p>
     <p class="mat-body-1">{{ post.content }}</p>
     <div class="action-buttons">
-      <button mat-raised-button (click)="goBack()" color="primary">Edit</button>
+      <a mat-raised-button routerLink="/posts/{{post.id}}/edit" color="primary">Edit</a>
       <button mat-raised-button (click)="deletePost(post.id)" color="warn">Delete</button>
       <button mat-raised-button (click)="goBack()">Go Back</button>
     </div>
