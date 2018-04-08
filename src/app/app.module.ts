@@ -24,6 +24,7 @@ import { AddPostComponent } from './components/add-post/add-post.component';
 import { ShowPostComponent } from './components/show-post/show-post.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { CommentShowComponent } from './components/comment-show/comment-show.component';
+import { CommentAddComponent } from './components/comment-add/comment-add.component';
 
 
 
@@ -35,7 +36,8 @@ import { CommentShowComponent } from './components/comment-show/comment-show.com
     AddPostComponent,
     ShowPostComponent,
     CommentsComponent,
-    CommentShowComponent
+    CommentShowComponent,
+    CommentAddComponent
   ],
   imports: [
     BrowserModule,
