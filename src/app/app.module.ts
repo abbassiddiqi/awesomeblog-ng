@@ -23,6 +23,7 @@ import { PostsComponent } from './components/posts/posts.component';
 import { AddPostComponent } from './components/add-post/add-post.component';
 import { ShowPostComponent } from './components/show-post/show-post.component';
 import { CommentsComponent } from './components/comments/comments.component';
+import { CommentShowComponent } from './components/comment-show/comment-show.component';
 
 
 
@@ -33,7 +34,8 @@ import { CommentsComponent } from './components/comments/comments.component';
     PostsComponent,
     AddPostComponent,
     ShowPostComponent,
-    CommentsComponent
+    CommentsComponent,
+    CommentShowComponent
   ],
   imports: [
     BrowserModule,
