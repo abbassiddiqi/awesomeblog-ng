@@ -8,7 +8,7 @@ import { Comment } from '../models/comment';
 
 @Injectable()
 export class CommentsService {
-  baseUrl = 'http://localhost:3000/api';
+  baseUrl = 'https://morning-gorge-53054.herokuapp.com/api';
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'

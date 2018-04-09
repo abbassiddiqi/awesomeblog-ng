@@ -8,7 +8,7 @@ import { Post } from '../models/post';
 
 @Injectable()
 export class PostsService {
-  private postsUrl = 'http://localhost:3000/api/posts';
+  private baseUrl = 'https://morning-gorge-53054.herokuapp.com/api';
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
@@ -17,7 +17,7 @@ export class PostsService {
   constructor(private http: HttpClient) { }
 
   getPosts(skip: number = 0, limit: number = 5): Observable<Post[]> {
-    const url = `${this.postsUrl}/?filter[skip]=${skip}&&filter[limit]=${limit}`;
+    const url = `${this.baseUrl}/posts?filter[skip]=${skip}&&filter[limit]=${limit}`;
     return this.http.get<Post[]>(url, this.httpOptions)
       .pipe(
         tap(() => { console.log('fetched posts'); }),
@@ -26,7 +26,7 @@ export class PostsService {
   }
 
   getPostsCount(): Observable<object> {
-    const url = `${this.postsUrl}/count`;
+    const url = `${this.baseUrl}/posts/count`;
     return this.http.get(url, this.httpOptions)
       .pipe(
         tap(() => { console.log('fetched posts count'); }),
@@ -35,7 +35,7 @@ export class PostsService {
   }
 
   getPost(id: string): Observable<Post> {
-    const url = `${this.postsUrl}/${id}`;
+    const url = `${this.baseUrl}/posts/${id}`;
     return this.http.get<Post>(url, this.httpOptions)
       .pipe(
         tap(() => { console.log('fetched post for id ', id); }),
@@ -44,7 +44,7 @@ export class PostsService {
   }
 
   addPost(postData): Observable<Post> {
-    return this.http.put<Post>(this.postsUrl, postData, this.httpOptions)
+    return this.http.put<Post>(this.baseUrl, postData, this.httpOptions)
       .pipe(
         tap(() => { console.log('added new post'); }),
         catchError(this.handleError<Post>('addPost'))
@@ -52,7 +52,7 @@ export class PostsService {
   }
 
   deletePost(postId): Observable<any> {
-    const url = `${this.postsUrl}/${postId}`;
+    const url = `${this.baseUrl}/posts/${postId}`;
     return this.http.delete(url, this.httpOptions)
       .pipe(
         tap(() => { console.log(`deleting post with id=${postId}`); }),
