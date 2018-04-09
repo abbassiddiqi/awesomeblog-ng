@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
@@ -47,6 +48,7 @@ import { CommentAddComponent } from './components/comment-add/comment-add.compon
     AppRoutingModule,
     FlexLayoutModule,
     FormsModule,
+    FontAwesomeModule,
     MatToolbarModule,
     MatCardModule,
     MatPaginatorModule,

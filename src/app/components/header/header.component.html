@@ -1,12 +1,9 @@
 <mat-toolbar fxLayout="row" fxLayoutAlign="space-between center" color="primary" role="header" class="mat-elevation-z5">
   <span>Awesome Blog</span>
   <div>
-    <button mat-button>
-      <mat-icon>perm_identity</mat-icon> Register
-    </button>
-    <button mat-button>
-      <mat-icon>account_circle</mat-icon> Signin
-    </button>
+    <a fxLayout="column" fxLayoutAlign="center" href="https://github.com/abbassiddiqi/awesomeblog-ng" mat-button>
+      <fa-icon [icon]="faGithub" size="lg"></fa-icon> &nbsp; <span>Github</span>
+    </a>
   </div>
 
 </mat-toolbar>
