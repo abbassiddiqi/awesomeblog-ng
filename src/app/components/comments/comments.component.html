@@ -1,8 +1,9 @@
 <div class="comments">
   <h2 class="mat-h2">Comments</h2>
+  <app-comment-add (commentAdded)="onCommentAdded($event)" [parentId]="parentId"></app-comment-add>
   <div class="comments-list">
-    <app-comment-show></app-comment-show>
-    <app-comment-show></app-comment-show>
+    <div class="comment" *ngFor="let comment of comments">
+      <app-comment-show (commentDeleted)="onCommentDeleted($event)" [comment]="comment"></app-comment-show>
+    </div>
   </div>
-  <app-comment-add></app-comment-add>
 </div>

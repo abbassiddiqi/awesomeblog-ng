@@ -1,3 +1,17 @@
-<mat-card>
-  Add Comment...
+<mat-card class="comment-add">
+  <form fxLayout="column">
+    <mat-form-field>
+      <textarea
+        matInput
+        name="content"
+        placeholder="Add new comment..."
+        [(ngModel)]="content"
+        matTextareaAutosize
+        matAutosizeMinRows="3"
+        matAutosizeMaxRows="6"></textarea>
+      </mat-form-field>
+    <div>
+      <button (click)="addComment()" mat-raised-button>Add Comment</button>
+    </div>
+  </form>
 </mat-card>

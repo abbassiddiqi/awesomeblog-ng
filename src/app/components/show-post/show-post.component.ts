@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { Post } from './../../models/post';
 import { PostsService } from './../../services/posts.service';
+import { CommentsService } from '../../services/comments.service';
 
 @Component({
   selector: 'app-show-post',
@@ -11,22 +12,23 @@ import { PostsService } from './../../services/posts.service';
   styleUrls: ['./show-post.component.css']
 })
 export class ShowPostComponent implements OnInit {
-
+  postId: string;
   post: Post;
 
   constructor(
     private postService: PostsService,
     private location: Location,
     private route: ActivatedRoute
-  ) { }
+  ) {
+    this.postId = this.route.snapshot.paramMap.get('id');
+  }
 
   ngOnInit() {
     this.getPost();
   }
 
   getPost(): void {
-    const id = this.route.snapshot.paramMap.get('id');
-    this.postService.getPost(id)
+    this.postService.getPost(this.postId)
       .subscribe((post) => {
         this.post = post;
       });

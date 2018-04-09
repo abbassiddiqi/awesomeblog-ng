@@ -16,6 +16,7 @@ import { MatInputModule } from '@angular/material/input';
 import { AppRoutingModule } from './app-routing.module';
 
 import { PostsService } from './services/posts.service';
+import { CommentsService } from './services/comments.service';
 
 import { AppComponent } from './components/app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -56,6 +57,7 @@ import { CommentAddComponent } from './components/comment-add/comment-add.compon
   ],
   providers: [
     PostsService,
+    CommentsService,
     Location
   ],
   bootstrap: [AppComponent]

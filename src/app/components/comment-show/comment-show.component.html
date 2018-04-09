@@ -1,3 +1,4 @@
-<mat-card>
-  Comment...
+<mat-card fxLayout="row">
+  <p fxFlex="1 auto">{{ comment.content }}</p>
+  <button (click)="deleteComment()" mat-mini-fab color="warn">x</button>
 </mat-card>
