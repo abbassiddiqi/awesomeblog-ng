@@ -6,11 +6,11 @@ import { PostsService } from '../../services/posts.service';
 import { Post } from './../../models/post';
 
 @Component({
-  selector: 'app-add-post',
-  templateUrl: './add-post.component.html',
-  styleUrls: ['./add-post.component.css']
+  selector: 'app-post-add',
+  templateUrl: './post-add.component.html',
+  styleUrls: ['./post-add.component.css']
 })
-export class AddPostComponent implements OnInit {
+export class PostAddComponent implements OnInit {
 
   id: string;
   title: string;

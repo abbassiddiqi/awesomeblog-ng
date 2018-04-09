@@ -21,8 +21,8 @@ import { CommentsService } from './services/comments.service';
 import { AppComponent } from './components/app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PostsComponent } from './components/posts/posts.component';
-import { AddPostComponent } from './components/add-post/add-post.component';
-import { ShowPostComponent } from './components/show-post/show-post.component';
+import { PostAddComponent } from './components/post-add/post-add.component';
+import { PostShowComponent } from './components/post-show/post-show.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { CommentShowComponent } from './components/comment-show/comment-show.component';
 import { CommentAddComponent } from './components/comment-add/comment-add.component';
@@ -34,8 +34,8 @@ import { CommentAddComponent } from './components/comment-add/comment-add.compon
     AppComponent,
     HeaderComponent,
     PostsComponent,
-    AddPostComponent,
-    ShowPostComponent,
+    PostAddComponent,
+    PostShowComponent,
     CommentsComponent,
     CommentShowComponent,
     CommentAddComponent

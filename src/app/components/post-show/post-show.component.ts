@@ -8,10 +8,10 @@ import { CommentsService } from '../../services/comments.service';
 
 @Component({
   selector: 'app-show-post',
-  templateUrl: './show-post.component.html',
-  styleUrls: ['./show-post.component.css']
+  templateUrl: './post-show.component.html',
+  styleUrls: ['./post-show.component.css']
 })
-export class ShowPostComponent implements OnInit {
+export class PostShowComponent implements OnInit {
   postId: string;
   post: Post;
 

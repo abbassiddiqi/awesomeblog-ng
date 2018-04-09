@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
 import { PostsComponent } from './components/posts/posts.component';
-import { AddPostComponent } from './components/add-post/add-post.component';
-import { ShowPostComponent } from './components/show-post/show-post.component';
+import { PostAddComponent } from './components/post-add/post-add.component';
+import { PostShowComponent } from './components/post-show/post-show.component';
 
 const routes: Routes = [
   {
@@ -13,15 +13,15 @@ const routes: Routes = [
   },
   {
     path: 'posts/new',
-    component: AddPostComponent
+    component: PostAddComponent
   },
   {
     path: 'posts/:id',
-    component: ShowPostComponent
+    component: PostShowComponent
   },
   {
     path: 'posts/:id/edit',
-    component: AddPostComponent
+    component: PostAddComponent
   },
   {
     path: '',
